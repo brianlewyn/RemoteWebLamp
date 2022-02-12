@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap');
+
+* {
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  font-size: 62.5%; /*[10px]*/
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  color: #FFF;
+  background: #121212;  
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+body::before {
+  content: url('img/BrianLewyn.svg');
+
+  display: block;
+  width: 3rem;
+  height: 3rem;
+  
+  position: absolute;
+  top: 0;
+  left: 0;
+  
+  transform: scale(.085);
+}
+
+.box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transform: translateY(35%);
+}
+
+h1 {
+  font-size: calc(3rem + 1.5vw);
+  font-weight: 600;
+}
+
+.controls {
+  display: grid;
+  gap: 2rem;
+  margin-top: 2rem;
+  z-index: 100;
+}
+
+
+h2 {
+  font-size: calc(2.6rem + 1.5vw); 
+  font-weight: 500; 
+  text-align: center;
+}
+
+.btns {
+  display: flex;
+  justify-content: center;
+}
+
+button {
+  font-size: calc(1.8rem + 1.5vw);
+  padding: .5rem 2rem;
+  margin: 0 calc(1rem + 1vw);
+  border: none;
+	outline: none;
+  border-radius: 3px;
+  background: none;
+}
+button:hover {
+  opacity: 0.9;
+  box-shadow: rgba(0, 0, 0, 0.4) 3px 1px 3px 3px;
+}
+.btn\:ON, .status\:ON {
+  background-image: radial-gradient(
+    circle 248px at center, 
+    #16d9e3 0%, 
+    #30c7ec 47%, 
+    #46aef7 100%);
+}
+.btn\:OFF, .status\:OFF {
+  background-image: linear-gradient(
+    120deg, 
+    #f093fb 0%, 
+    #f5576c 100%);
+}
+
+h3 {
+  font-size: calc(2rem + 1.5vw); 
+  text-align: center; 
+  font-weight: 400; 
+  color: #000;
+}
+
+.frame {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  
+  width: 100%;
+  height: calc(24vh + 50vw);
+  max-height: 100vh;
+
+  padding: calc(.2rem + 1vw);
+  
+  overflow: hidden;
+  z-index: -1;
+}
+.img\:ON {
+  position: relative;
+  bottom: 0rem;
+  left: 0;
+  
+  width: 100%;
+  height: 100%;
+  
+  background-image: url("img/BackHome.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+
+  opacity: 0.85;
+}
+.img\:OFF {
+  
+  position: relative;
+  bottom: 0rem;
+  left: 0;
+  
+  width: 100%;
+  height: 100%;
+  
+  background-image: url("img/FallIsComing.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+
+  opacity: 0.85;
+}
