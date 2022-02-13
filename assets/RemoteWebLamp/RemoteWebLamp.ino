@@ -48,8 +48,6 @@ void loop() {
         if (r == '\n' && Blanks) {
           client.println("HTTP/1.1 200 OK");
           client.println("Content-Type: text/html");
-          client.println("Connection: close");
-          client.println("Refresh: 10");
           client.println();          
 
           client.println("<!DOCTYPE html>");
@@ -63,6 +61,10 @@ void loop() {
           client.println("</head>");
           client.println("<body>");
 
+            client.println("<a href='192.168.0.125'>");
+              client.println("<img src='https://brianlewyn.github.io/RemoteWebLamp/assets/img/BrianLewyn.svg'>");
+            client.println("</a>");
+            
             client.println("<div class='box'>");
               client.println("<h1>Remote Web Lamp</h1>");
               
@@ -96,7 +98,7 @@ void loop() {
         else if (r != '\r') {Blanks = false;}
       }
     }
-    delay(15);
+    delay(10);
     client.stop();
   }
 }

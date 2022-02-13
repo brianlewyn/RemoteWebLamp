@@ -15,19 +15,12 @@ body {
   height: 100vh;
   overflow: hidden;
 }
-body::before {
-  content: url('img/BrianLewyn.svg');
-
-  display: block;
-  width: 3rem;
-  height: 3rem;
-  
+a {
   position: absolute;
-  top: 0;
-  left: 0;
-  
-  transform: scale(.085);
+  top: 1.2rem;
+  left: 1.2rem;
 }
+img {height: calc(3.5rem + .8vw);}
 
 .box {
   display: flex;
@@ -71,7 +64,7 @@ button {
 }
 button:hover {
   opacity: 0.9;
-  box-shadow: rgba(0, 0, 0, 0.4) 3px 1px 3px 3px;
+  box-shadow: rgba(0, 0, 0, 0.5) 3px 1px 3px 3px;
 }
 .btn\:ON, .status\:ON {
   background-image: radial-gradient(
